@@ -4,13 +4,16 @@
   "main": "index.js",
   "dependencies": {
     "@toruslabs/eccrypto": "^2.1.1",
+    "axios": "^1.4.0",
     "brorand": "^1.1.0",
     "hash.js": "^1.1.7",
     "hmac-drbg": "^1.0.1",
     "inherits": "^2.0.4",
     "minimalistic-assert": "^1.0.1",
     "minimalistic-crypto-utils": "^1.0.1",
-    "sha256": "^0.2.0"
+    "redis": "^4.6.6",
+    "sha256": "^0.2.0",
+    "testcontainers": "^9.6.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
