@@ -2,7 +2,7 @@
 import {sum} from "./sum";
 import * as fc from "fast-check";
 
-const minMax = fc.tuple(fc.integer(), fc.integer()).map((t) => (t[0] < t[1] ? [t[0], t[1]] : [t[1], t[0]]));
+const minMax = fc.tuple(fc.integer(), fc.integer()) // .map((t) => (t[0] < t[1] ? [t[0], t[1]] : [t[1], t[0]]));
 
 describe('sum module a', () => {
   test('sum of generator is equals to a + b', () => {
