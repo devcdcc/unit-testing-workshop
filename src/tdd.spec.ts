@@ -8,7 +8,7 @@ describe('User', () => {
     const sender: User = new UserWithEcc("sender", "1234")
     const receiver: User = new UserWithEcc("receiver", "1234")
 
-    const encrypted = sender.encrypt(receiver.getPublicKey(), originalMessage)
+    const encrypted = sender.encrypt(Buffer.from(receiver.getPublicKey().toString("hex"), 'hex'), originalMessage)
     const decryted =  await encrypted.then( a => receiver.decrypt(a))
 
     expect(decryted).toBe(originalMessage)
