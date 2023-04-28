@@ -1,4 +1,4 @@
-import {GenericContainer, StartedTestContainer, Network} from "testcontainers";
+import {GenericContainer, StartedTestContainer} from "testcontainers";
 import { createClient, RedisClientType } from "redis";
 
 
@@ -21,8 +21,6 @@ describe("Redis", () => {
   });
 
   it("works", async () => {
-    const port = container.getMappedPort(6379)
-    const host = container.getHost()
     await redisClient.set("key", "val");
     expect(await redisClient.get("key")).toBe("val");
   }, 60000);
